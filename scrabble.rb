@@ -7,16 +7,15 @@ class Scrabble < Sinatra::Base
   end
 
   post '/score_many' do
-     @words = params["user_word"]
-     word_string = @words.split(' ')
-
+     @words_played = params["user_word"]
+     word_string = @words_played.split(' ')
+     @score_many = []
       word_string.each do |word|
-       @score_many = Scoring.score(word)
+      @score = Scoring.score(word)
+      @score_many << @score
      end
-
-     #split @word_played into an array
-     #then score each element with a loop
-    erb :score
+     @scored_words = @score_many.reduce(:+)
+    erb :score_many
 
   end
 
