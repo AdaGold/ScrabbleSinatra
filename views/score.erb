@@ -4,12 +4,36 @@
   <title>index</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
-</head>
-<body>
+  </head>
+    <body>
 
 
-<h1>Comming soon!</h1>  
+    <h1>Comming soon!</h1>
+
+    <%if @word_played%>
+    <h1>
+      You played <%=@word_played%>
+      Your score is <%=@score%>!
+    </h1>
+    <% end %>
+
+    <div class="params">
+      <%= params%>
+    </div>
 
 
-</body>
+      <form action="" method="post" accept-charset="utf-8">
+
+        <label for="word">Put in Word</label>
+        <input type="text" name="user_word" value="" id="word">
+
+        <!-- <label for="fave-animal">Favorite Animal</label>
+        <input type="text" name="people[favorite_animal]" value="" id="fave-animal"> -->
+
+        <input type="submit" value="Submit">
+
+      </form>
+
+
+    </body>
 </html>

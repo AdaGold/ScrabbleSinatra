@@ -11,5 +11,29 @@
 <h1>Score Many comming sooon!</h1>
 
 
+<%if @word%>
+<h1>
+  You played <%=@word%>
+  Your score is <%=@score_many%>!
+</h1>
+<% end %>
+
+<div class="params">
+  <%= params%>
+</div>
+
+
+<form action="" method="post" accept-charset="utf-8">
+
+  <label for="word">Put in Word</label>
+  <input type="text" name="user_word" value="" id="word">
+
+  <input type="submit" value="Submit">
+
+
+</form>
+
+
+
 </body>
 </html>
