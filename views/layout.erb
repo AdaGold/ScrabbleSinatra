@@ -1,16 +1,42 @@
-<%=yield%>
+
 
 <!DOCTYPE html>
 <html>
 <head>
   <title>index</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
 
 
-  
+  <section class = "heading">
+     <h1>Lets Play Some Scrabble!</h1>
+  </section>
+
+
+    <nav class = "nav">
+      <ul>
+        <li><a href="/score">Score one word.</a></li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="/score_many">Score many words.</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="score">
+    </section>
+
+
+    <section class= "score_many">
+    </section>
+
+
+ <%= yield %>
+
 
 </body>
 </html>

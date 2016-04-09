@@ -12,9 +12,10 @@ class Scrabble < Sinatra::Base
      @score_many = []
       word_string.each do |word|
       @score = Scoring.score(word)
-      @score_many << @score
+      @score_array = @score_many << @score
      end
-     @scored_words = @score_many.reduce(:+)
+     @score_hash = Hash[@words_played.split(' ').zip @score_array]
+    #  @scored_words = @score_many.reduce(:+)
     erb :score_many
 
   end
