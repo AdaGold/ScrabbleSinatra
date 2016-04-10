@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>index</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+</head>
+<body>
+
+
+<section class="score_many">
+  <%if @words_played%>
+
+  <h1>
+    You played: <%= @score_hash%>
+  </h1>
+
+  <h1>
+    Your score is: <%= @score_array.reduce(:+)%>!
+  </h1>
+  <% end %>
+
+  <!-- <div class="params">
+    <%= params%>
+  </div> -->
+
+
+  <form action="" method="post" accept-charset="utf-8">
+
+    <label for="word">Type in more than one word</label>
+    <input type="text" name="user_word" value="" id="word">
+
+    <input type="submit" value="Submit">
+
+
+  </form>
+
+
+</section>
+
+
+
+
+
+</body>
+</html>

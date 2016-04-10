@@ -1,0 +1,31 @@
+body {
+    background-image: url("scrabble.jpg");
+}
+
+
+
+.heading {
+  display: block;
+  background-color: white;
+
+}
+
+.nav {
+  display: block;
+  background-color: red;
+
+}
+
+li.nav {
+  list-style-type: none;
+}
+
+.score {
+  display: block;
+  background-color: blue;
+}
+
+.score_many {
+display: block;
+background-color: green;
+}

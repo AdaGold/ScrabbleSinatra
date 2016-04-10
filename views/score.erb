@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>index</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+  </head>
+    <body>
+
+
+    <section class = "score">
+
+
+
+    <%if @word_played%>
+              <h1>
+                You played : <%=@word_played%>
+              </h1>
+
+              <h1>
+                Your score is : <%=@score%>!
+              </h1>
+              <% end %>
+
+                  <!-- <div class="params">
+                    <%= params%>
+                  </div> -->
+
+
+              <form action="" method="post" accept-charset="utf-8">
+
+                <label for="word">Type in one word</label>
+                <input type="text" name="user_word" value="" id="word">
+
+
+                <input type="submit" value="Submit">
+
+              </form>
+          </section>
+
+    </body>
+</html>
